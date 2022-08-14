@@ -1,11 +1,10 @@
 import CategoryItem from '../category-item/category-item.component';
 
-import './categories-list.component';
+import './directory.component';
 
-import './categories-list.styles.scss';
+import './directory.styles.scss';
 
-const CategoriesList = ({ categories }) => {
-  console.log(categories);
+const Directory = ({ categories }) => {
   return (
     <div className='categories-list-container'>
       {categories.map(category => (
@@ -15,4 +14,4 @@ const CategoriesList = ({ categories }) => {
   );
 };
 
-export default CategoriesList;
+export default Directory;
