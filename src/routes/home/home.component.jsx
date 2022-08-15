@@ -6,8 +6,8 @@ import categories from '../../components/categories-data/categories';
 const Home = () => {
   return (
     <div>
-      <Directory categories={categories} />)
       <Outlet />
+      <Directory categories={categories} />)
     </div>
   );
 };
