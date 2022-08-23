@@ -42,13 +42,13 @@ export const createUserDocumentFromAuth = async (
   userAuth,
   additionalInformation = {}
 ) => {
-  console.log(userAuth);
+  // console.log(userAuth);
   if (!userAuth) return;
   const userDocRef = doc(db, 'users', userAuth.uid);
 
   const userSnapshot = await getDoc(userDocRef);
 
-  console.log('Does it exist', userSnapshot.exists());
+  // console.log('Does it exist', userSnapshot.exists());
 
   if (!userSnapshot.exists()) {
     const { email, displayName } = userAuth;
