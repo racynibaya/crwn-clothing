@@ -6,8 +6,10 @@ import {
 } from '../../utils/firebase/firebase.utils';
 
 import FormInput from '../form-input/form-input.component';
-import Button from '../button/button.component';
+// import Button from '../button/button.component';
 import './sign-up-form.styles.scss';
+
+import { Button } from '@material-ui/core';
 
 const defaultFormField = {
   displayName: '',
@@ -67,7 +69,6 @@ const SignUpForm = () => {
           value={displayName}
           onChange={handleChange}
         />
-
         <FormInput
           label='Email'
           type='email'
@@ -76,7 +77,6 @@ const SignUpForm = () => {
           value={email}
           onChange={handleChange}
         />
-
         <FormInput
           label='Password'
           type='password'
@@ -85,7 +85,6 @@ const SignUpForm = () => {
           value={password}
           onChange={handleChange}
         />
-
         <FormInput
           label='Confirm Password'
           type='password'
@@ -94,8 +93,8 @@ const SignUpForm = () => {
           value={confirmPassword}
           onChange={handleChange}
         />
-
         <Button type='submit'>Sign Up</Button>
+        <Button color='primary'>Hello World</Button>
       </form>
     </div>
   );

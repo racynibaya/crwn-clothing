@@ -1,4 +1,3 @@
-/* eslint-disable default-case */
 import { useState } from 'react';
 
 import {
@@ -11,7 +10,6 @@ import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
 
 import './sign-in-form.styles.scss';
-import { signInWithEmailAndPassword } from 'firebase/auth';
 
 const defaultFormField = {
   email: '',
@@ -23,8 +21,7 @@ const SignInForm = () => {
   const { email, password } = formField;
 
   const signInWithGoogle = async function () {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   const resetFormFields = () => {
@@ -40,20 +37,20 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
+      const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
 
       resetFormFields();
     } catch (error) {
-      console.log(error.code);
-
       if (
         error.code === 'auth/wrong-password' ||
         error.code === 'auth/user-not-found'
-      )
+      ) {
         alert('Something went wrong, Put a valid user!');
+        resetFormFields();
+      }
     }
   };
 
