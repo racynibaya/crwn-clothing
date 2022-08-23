@@ -8,12 +8,22 @@ import App from './App';
 
 import reportWebVitals from './reportWebVitals';
 
+import { ProductsProvider } from './contexts/products.context';
+import { CartItemsProvider } from './contexts/cart-items.context';
+import { CartProvider } from './contexts/cart.context';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <ProductsProvider>
+          <CartItemsProvider>
+            <CartProvider>
+              <App />
+            </CartProvider>
+          </CartItemsProvider>
+        </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
