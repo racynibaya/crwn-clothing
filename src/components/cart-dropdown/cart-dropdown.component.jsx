@@ -1,29 +1,32 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import { CartItemsContext } from '../../contexts/cart-items.context';
+import { CartContext } from '../../contexts/cart.context';
 
+import CartItem from '../cart-item/cart-item.component';
 import Button from '../button/button.component';
 import './cart-dropdown.styles.scss';
 
 const CartDropDown = () => {
-  const { items } = useContext(CartItemsContext);
+  const { cartItems } = useContext(CartContext);
 
-  if (!items) return;
+  const navigate = useNavigate();
+
+  const goToCheckOutHandler = () => {
+    navigate('/checkout');
+  };
+
+  //   if (!items) return;
 
   return (
     <div className='cart-dropdown-container'>
-      {items.map(item => {
-        const { id, imageUrl, name, price } = item;
-        return (
-          <div className='cart-items' key={id}>
-            <img src={imageUrl} alt={name} />
-            <span>{name}</span>
-            <span>{price}</span>
-          </div>
-        );
-      })}
+      <div className='cart-items'>
+        {cartItems.map(cartItem => (
+          <CartItem key={cartItem.id} cartItem={cartItem} />
+        ))}
+      </div>
 
-      <Button>CHECKOUT</Button>
+      <Button onClick={goToCheckOutHandler}>Go to CHECKOUT</Button>
     </div>
   );
 };
