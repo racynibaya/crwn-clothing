@@ -14,6 +14,7 @@ const Authentication = () => {
 
     await createUserDocumentFromAuth(user);
   };
+  console.log(logGoogleUser);
 
   return (
     <AuthContainer>

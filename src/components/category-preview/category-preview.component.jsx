@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 import ProductCard from '../product-card/product-card.component';
 
@@ -9,11 +9,11 @@ import {
 } from './category-preview.styles';
 
 const CategoryPreview = ({ title, products }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const clickHandler = () => {
-    navigate(`${title}`);
-  };
+  // const clickHandler = () => {
+  //   navigate(`${title}`);
+  // };
 
   return (
     <CategoryPreviewContainer>
