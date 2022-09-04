@@ -1,7 +1,10 @@
 import { useContext } from 'react';
 import { CartContext } from '../../contexts/cart.context';
 
-import { IoIosArrowBack, IoIosArrowForward, IoMdClose } from 'react-icons/io';
+import {
+  IoIosArrowBack,
+  IoIosArrowForward /*IoMdClose*/,
+} from 'react-icons/io';
 import './checkout-item.styles.jsx';
 import {
   OrderName,

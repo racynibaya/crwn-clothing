@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 import { MdOutlineRemoveShoppingCart } from 'react-icons/md';
 import { CartContext } from '../../contexts/cart.context';
