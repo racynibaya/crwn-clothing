@@ -7,7 +7,7 @@ import {
 
 import FormInput from '../form-input/form-input.component';
 
-import './sign-up-form.styles.scss';
+import './sign-up-form.styles.jsx';
 
 // import { Button } from '@material-ui/core';
 import Button from '../button/button.component';
