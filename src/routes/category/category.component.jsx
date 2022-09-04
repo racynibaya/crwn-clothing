@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useContext } from 'react';
 import { CategoriesContext } from '../../contexts/categories.context';
 
-import './category.styles.jsx';
+import { CategoryContainer } from './category.styles.jsx';
 import ProductCard from '../../components/product-card/product-card.component';
 const Category = () => {
   const { category } = useParams();
@@ -27,12 +27,12 @@ const Category = () => {
       >
         {category}
       </h2>
-      <div className='category-container'>
+      <CategoryContainer>
         {products &&
           products.map(product => (
             <ProductCard product={product} key={product.id} />
           ))}
-      </div>
+      </CategoryContainer>
     </>
   );
 };
