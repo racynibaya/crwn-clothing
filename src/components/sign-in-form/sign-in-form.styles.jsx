@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const SignInContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 380px;
+  width: 3.8rem;
 `;
 
 export const H2Container = styled.h2`
-  margin: 10px 0;
+  margin: 1rem 0;
 `;
 
 export const ButtonsContainer = styled.div`

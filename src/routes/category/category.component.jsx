@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useContext } from 'react';
 import { CategoriesContext } from '../../contexts/categories.context';
 
-import { CategoryContainer } from './category.styles.jsx';
+import { CategoryContainer, HeadingH2 } from './category.styles.jsx';
 import ProductCard from '../../components/product-card/product-card.component';
 const Category = () => {
   const { category } = useParams();
@@ -16,17 +16,7 @@ const Category = () => {
 
   return (
     <>
-      <h2
-        className='category-title'
-        style={{
-          textAlign: 'center',
-          textTransform: 'uppercase',
-          fontSize: '38px',
-          marginBottom: '25px',
-        }}
-      >
-        {category}
-      </h2>
+      <HeadingH2>{category}</HeadingH2>
       <CategoryContainer>
         {products &&
           products.map(product => (

@@ -8,15 +8,15 @@ import {
 
 export const CartDropDownContainer = styled.div`
   position: absolute;
-  width: 320px;
-  height: 340px;
+  width: 3.2rem;
+  height: 3.4rem;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 2rem;
   border: 1px solid black;
   background-color: white;
-  top: 90px;
-  right: 40px;
+  top: 9rem;
+  right: 4rem;
   z-index: 5;
 
   ${BaseButton},
@@ -27,8 +27,8 @@ export const CartDropDownContainer = styled.div`
 `;
 
 export const EmptyMessage = styled.p`
-  font-size: 24px;
-  margin: 90px auto 50px auto;
+  font-size: 2.4rem;
+  margin: 9rem auto 5rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +36,7 @@ export const EmptyMessage = styled.p`
 `;
 
 export const CartItems = styled.div`
-  height: 240px;
+  height: 24rem;
   display: flex;
   flex-direction: column;
   overflow: scroll;
