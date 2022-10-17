@@ -9,15 +9,16 @@ export const OrdersContainer = styled.div`
 `;
 
 export const CheckoutNavigation = styled.nav`
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid rgba(202, 202, 202, 0.567);
   padding: 1rem 0;
+  font-size: 1.6rem;
 `;
 
 export const Orders = styled.div`
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

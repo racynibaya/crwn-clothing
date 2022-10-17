@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 export const Product = styled.img`
   width: 100%;
-  height: 1.6rem;
+  height: 16rem;
   object-fit: cover;
   align-self: flex-start;
 `;
@@ -21,6 +21,7 @@ export const OrdersDetails = styled.div`
   align-items: center;
   column-gap: 1rem;
   margin-bottom: 1.5rem;
+  font-size: 1.6rem;
 `;
 
 export const OrderName = styled.span`

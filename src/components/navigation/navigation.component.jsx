@@ -33,7 +33,7 @@ const Navigation = () => {
         <NavLinks>
           <NavLink to='/shop'>SHOP</NavLink>
 
-          <NavLink to='/checkout'>CONTACT</NavLink>
+          <NavLink to='/checkout'>ORDERS</NavLink>
 
           {currentUser ? (
             <NavLink to={'/auth'} onClick={signOutUser}>

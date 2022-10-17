@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const SignInContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 3.8rem;
+  width: 38rem;
 `;
 
 export const H2Container = styled.h2`
